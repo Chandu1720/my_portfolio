@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chandu | Frontend Developer Portfolio</title>
+  
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- DevIcons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .animate-fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Image hover animations */
+    .hover-zoom:hover {
+      transform: scale(1.05) rotate(1deg);
+    }
+    .hover-zoom {
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+    }
+    .hover-glow:hover {
+      box-shadow: 0 10px 30px rgba(59,130,246,0.4);
+    }
+    .contact-card {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .contact-link:hover {
+      transform: translateY(-2px);
+    }
+    .social-link:hover {
+      transform: translateY(-3px) scale(1.1);
+    }
+    .btn-gradient {
+      background: linear-gradient(135deg, #10b981, #3b82f6);
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    }
+    .btn-gradient:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-blue-600">Chandu Portfolio</h1>
+      <ul class="hidden md:flex gap-6 text-gray-700 font-medium">
+        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600">About</a></li>
+        <li><a href="#journey" class="hover:text-blue-600">Journey</a></li>
+        <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+        <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+      <button class="md:hidden text-gray-700"><i class="fas fa-bars text-2xl"></i></button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="flex flex-col-reverse md:flex-row items-center justify-between px-8 pt-32 pb-20 max-w-7xl mx-auto">
+    <!-- Text Content -->
+    <div class="md:w-1/2 space-y-6 animate-fade-up">
+      <span class="inline-block px-4 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-500 rounded-full">
+        FRONTEND · REACT · JAVASCRIPT
+      </span>
+      <h2 class="text-2xl md:text-3xl font-light text-gray-500">I design and build engaging digital experiences</h2>
+      <h1 class="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent">
+         FRONTEND
+      </h1>
+      <p class="text-gray-600 leading-relaxed">
+
+Creative frontend developer skilled in <span class="font-bold text-xl">React, JavaScript, and modern web technologies.</span> I focus on crafting responsive, accessible, and performance-driven interfaces that blend functionality with seamless user experience.
+      </p>
+      <div class="flex gap-4 pt-4">
+        <a href="#about" class="px-6 py-3 rounded-lg bg-blue-600 text-white font-medium shadow hover:bg-blue-700 transition">About Me</a>
+        <a href="#projects" class="px-6 py-3 rounded-lg border border-gray-300 text-gray-700 font-medium hover:bg-gray-100 transition">See Projects</a>
+      </div>
+    </div>
+    <!-- Image -->
+    <div class="md:w-1/2 flex justify-center relative mb-10 md:mb-0">
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-500 rounded-3xl transform rotate-3 scale-95 opacity-80"></div>
+      <img src="./ChatGPT Image Sep 2, 2025, 04_08_16 PM.png" alt="Frontend Developer" class="relative z-10 rounded-2xl shadow-lg max-w-xs md:max-w-md hover-zoom hover-glow" />
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-24 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/3 animate-fade-up">
+        <img src="./ChatGPT Image Sep 2, 2025, 04_08_16 PM.png" alt="Chandu about me" class="rounded-2xl shadow-lg w-full hover-zoom hover-glow">
+      </div>
+      <div class="md:w-2/3 space-y-6 animate-fade-up">
+        <h2 class="text-4xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">About Me</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Hi, <span class="font-bold text-xl">I'm Chandu — a frontend developer </span>passionate about creating engaging, user-friendly web experiences.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          I specialize in <span class="font-bold text-xl text-blue-700">React, JavaScript, and modern CSS frameworks</span>, turning complex problems into simple, beautiful solutions. My journey began in college when I built my first website for a local business, and since then I've been hooked on building the web.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-6">
+          <div class="bg-white p-4 rounded-lg shadow">
+            <h3 class="font-semibold text-blue-600">Problem Solving</h3>
+            <p class="text-sm text-gray-600">Creative solutions for complex challenges</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <h3 class="font-semibold text-blue-600">Collaboration</h3>
+            <p class="text-sm text-gray-600">Effective teamwork & communication</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <h3 class="font-semibold text-blue-600">Learning</h3>
+            <p class="text-sm text-gray-600">Always expanding my skill set</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">Skills</h2>
+      <p class="text-gray-500 mb-12">Technologies I use to build beautiful, scalable, and performant applications.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="group p-6 rounded-2xl bg-white border hover:border-teal-500 transition shadow-sm hover:shadow-lg animate-fade-up" style="animation-delay:0.1s">
+          <i class="devicon-html5-plain colored text-5xl mb-3 group-hover:scale-110 transition"></i>
+          <h3 class="text-lg font-semibold">HTML5</h3>
+        </div>
+        <div class="group p-6 rounded-2xl bg-white border hover:border-teal-500 transition shadow-sm hover:shadow-lg animate-fade-up" style="animation-delay:0.2s">
+          <i class="devicon-css3-plain colored text-5xl mb-3 group-hover:scale-110 transition"></i>
+          <h3 class="text-lg font-semibold">CSS3</h3>
+        </div>
+        <div class="group p-6 rounded-2xl bg-white border hover:border-teal-500 transition shadow-sm hover:shadow-lg animate-fade-up" style="animation-delay:0.3s">
+          <i class="devicon-javascript-plain colored text-5xl mb-3 group-hover:scale-110 transition"></i>
+          <h3 class="text-lg font-semibold">JavaScript</h3>
+        </div>
+        <div class="group p-6 rounded-2xl bg-white border hover:border-teal-500 transition shadow-sm hover:shadow-lg animate-fade-up" style="animation-delay:0.4s">
+          <i class="devicon-react-original colored text-5xl mb-3 group-hover:scale-110 transition"></i>
+          <h3 class="text-lg font-semibold">React</h3>
+        </div>
+        <div class="group p-6 rounded-2xl bg-white border hover:border-teal-500 transition shadow-sm hover:shadow-lg animate-fade-up" style="animation-delay:0.5s">
+          <i class="devicon-redux-original colored text-5xl mb-3 group-hover:scale-110 transition"></i>
+          <h3 class="text-lg font-semibold">Redux</h3>
+        </div>
+        <div class="group p-6 rounded-2xl bg-white border hover:border-teal-500 transition shadow-sm hover:shadow-lg animate-fade-up" style="animation-delay:0.6s">
+          <i class="devicon-tailwindcss-plain colored text-5xl mb-3 group-hover:scale-110 transition"></i>
+          <h3 class="text-lg font-semibold">Tailwind CSS</h3>
+        </div>
+        <div class="group p-6 rounded-2xl bg-white border hover:border-teal-500 transition shadow-sm hover:shadow-lg animate-fade-up" style="animation-delay:0.7s">
+          <i class="devicon-git-plain colored text-5xl mb-3 group-hover:scale-110 transition"></i>
+          <h3 class="text-lg font-semibold">Git</h3>
+        </div>
+        <div class="group p-6 rounded-2xl bg-white border hover:border-teal-500 transition shadow-sm hover:shadow-lg animate-fade-up" style="animation-delay:0.8s">
+          <i class="devicon-jira-plain colored text-5xl mb-3 group-hover:scale-110 transition"></i>
+          <h3 class="text-lg font-semibold">Jira</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Education & Experience Section -->
+  <section id="journey" class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+        Education & Experience
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        
+        <!-- Education Column -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-6 text-blue-600">🎓 Education</h3>
+          <div class="space-y-8">
+            <!-- Education Item -->
+            <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition animate-fade-up">
+              <h4 class="text-xl font-semibold">B.Tech in Electronics & Communication</h4>
+              <p class="text-gray-600">UshaRama college of Engineering · 2020 – 2024</p>
+              <p class="text-gray-500 mt-2">Graduated with a strong foundation in electronics, communication systems, developing a strong foundation in both hardware and software concepts..</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Column -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-6 text-purple-600">💻 Experience</h3>
+          <div class="space-y-8">
+            <!-- Experience Item -->
+            <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition animate-fade-up">
+              <h4 class="text-xl font-semibold">Frontend Developer Intern</h4>
+              <p class="text-gray-600">Podbic · March 2025 – Present</p>
+              <p class="text-gray-500 mt-2">Developing responsive and dynamic UI components with React, Tailwind CSS, and JavaScript. Contributed to bug fixing and optimization for production apps.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="px-8 py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">Featured Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80" alt="Project 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Distribution Management System</h3>
+            <p class="text-gray-600 mb-4">A custom web application for a medical implant distributor, featuring Surgery Tracking, Sales, Logistics, and Analytics modules to streamline operations.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">React18</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">JavaScript</span>
+              <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">MUI</span>
+              <span class="px-3 py-1 bg-gray-200 text-gray-800 text-xs rounded-full">Git</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Jest</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80" alt="Project 2" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Weather Analytics</h3>
+            <p class="text-gray-600 mb-4">Interactive data visualization with charts and real-time updates.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">React</span>
+              <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">Chart.js</span>
+              <span class="px-3 py-1 bg-red-100 text-red-800 text-xs rounded-full">API</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" alt="Project 3" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+            <p class="text-gray-600 mb-4">Creative portfolio with smooth animations and responsive design.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-green-100 text-green-800 text-xs rounded-full">HTML</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">CSS</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Contact Section -->
+<section id="contact" class="py-24 px-6 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-6">Let’s Connect</h2>
+    <p class="text-gray-300 mb-12">I’m always excited to collaborate and explore new opportunities. Feel free to reach out!</p>
+
+    <!-- Social Links -->
+    <div class="flex justify-center gap-8 mb-12">
+      
+      <!-- GitHub -->
+      <a href="https://github.com/Chandu1720" target="_blank" class="group">
+        <div class="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center group-hover:bg-gray-600 transition-colors">
+          <i class="fab fa-github text-white text-xl"></i>
+        </div>
+        <p class="mt-2 text-sm text-gray-300">GitHub</p>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/chandu-kampasati-970b3325a/" target="_blank" class="group">
+        <div class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-700 transition-colors">
+          <i class="fab fa-linkedin text-white text-xl"></i>
+        </div>
+        <p class="mt-2 text-sm text-gray-300">LinkedIn</p>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:chandukampasati.1@gmail.com" class="group">
+        <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center group-hover:bg-red-700 transition-colors">
+          <i class="fas fa-envelope text-white text-xl"></i>
+        </div>
+        <p class="mt-2 text-sm text-gray-300">Email</p>
+      </a>
+    </div>
+
+    <!-- Say Hello Button (Gmail compose + mailto fallback) -->
+    <a href="mailto:chandukampasati.1@gmail.com" 
+       onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=chandukampasati.1@gmail.com&su=Hello%20Chandu&body=Hi%20Chandu%2C%0A%0AI%20would%20like%20to%20connect%20with%20you...','_blank'); return false;" 
+       class="btn-gradient inline-block px-8 py-3 rounded-xl font-semibold text-lg bg-gradient-to-r from-green-400 to-blue-500 hover:opacity-90 transition">
+      Say Hello
+    </a>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white px-8 py-16">
+    <div class="border-t border-gray-700 pt-6 text-gray-500 text-center">
+      <p>© 2025 Chandu Portfolio. Made with ❤️ using Tailwind CSS.</p>
+    </div>
+  </footer>
+</body>
+</html>
